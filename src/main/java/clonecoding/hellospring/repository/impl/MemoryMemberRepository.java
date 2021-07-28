@@ -13,7 +13,7 @@ public class MemoryMemberRepository implements MemberRepository {
 
     @Override
     public Member save(Member member) {
-        member.setId(sequence);
+        member.setId(++sequence);
         store.put(member.getId(), member);
         return member;
     }
@@ -34,4 +34,7 @@ public class MemoryMemberRepository implements MemberRepository {
     public List<Member> findAll() {
         return new ArrayList<>(store.values());
     }
+
+    public void clearStore() { store.clear(); }
+
 }
