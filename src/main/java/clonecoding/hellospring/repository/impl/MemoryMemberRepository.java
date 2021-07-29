@@ -2,9 +2,11 @@ package clonecoding.hellospring.repository.impl;
 
 import clonecoding.hellospring.domain.Member;
 import clonecoding.hellospring.repository.MemberRepository;
+import org.springframework.stereotype.Repository;
 
 import java.util.*;
 
+@Repository
 public class MemoryMemberRepository implements MemberRepository {
     // 실무에서는 동시성 문제로 인해 concurrentHashMap 사용.
     private static Map<Long, Member> store = new HashMap<>();
