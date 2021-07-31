@@ -2,7 +2,6 @@ package clonecoding.hellospring.repository.impl;
 
 import clonecoding.hellospring.domain.Member;
 import clonecoding.hellospring.repository.MemberRepository;
-import org.springframework.stereotype.Repository;
 
 import java.util.*;
 
