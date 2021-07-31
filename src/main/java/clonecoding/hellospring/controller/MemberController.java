@@ -21,14 +21,6 @@ import org.springframework.web.bind.annotation.RequestMapping;
 public class MemberController {
     // 스프링 컨테이너에 등록하고 쓴다.
     private final MemberService memberService;
-//  @Autowired  private final MemberService memberService; => 필드 주입 방법.
-/*
- => setter 주입 방식.
-@Autowired
-public void setMemberService(MemberService memberService) {
-    this.memberService = memberService;
-}
- */
 
     // 스프링 컨테이너에서 가져온다, 외부에서의 주입 ( Dependency Injection )
     // 생성자 주입 방법.
