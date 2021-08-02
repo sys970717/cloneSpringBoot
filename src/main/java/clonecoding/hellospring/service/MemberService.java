@@ -6,6 +6,7 @@ import clonecoding.hellospring.repository.impl.MemoryMemberRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 
 import javax.swing.text.html.Option;
 import java.util.List;
@@ -16,6 +17,7 @@ import java.util.Optional;
  * 스프링 컨테이너에 등록이 되지않았음.
  * java 소스로 직접 등록함.
  */
+@Transactional
 public class MemberService {
     private final MemberRepository memberRepository;
 
